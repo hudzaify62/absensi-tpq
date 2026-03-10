@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi TPQ Al-Qur'an</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>TPQ Al-Qur'an</h1>
+        <p>Sistem Absensi Sederhana</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('santri')">Daftar Santri</button>
+        <button onclick="showSection('absensi')">Absensi</button>
+        <button onclick="showSection('rekap')">Rekap</button>
+    </nav>
+
+    <main>
+        <section id="section-santri">
+            <h2>Kelola Santri</h2>
+            <div class="input-group">
+                <input type="text" id="nama-santri" placeholder="Nama Lengkap Santri...">
+                <button onclick="tambahSantri()">Tambah</button>
+            </div>
+            <ul id="list-santri"></ul>
+        </section>
+
+        <section id="section-absensi" style="display:none;">
+            <h2>Absensi Hari Ini</h2>
+            <p id="tgl-sekarang"></p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama Santri</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-absensi-body"></tbody>
+                </table>
+            </div>
+            <div class="btn-group">
+                <button class="btn-save" onclick="simpanAbsensi()">Simpan Absensi</button>
+                <button class="btn-reset" onclick="resetAbsensiHariIni()">Reset Hari Ini</button>
+            </div>
+        </section>
+
+        <section id="section-rekap" style="display:none;">
+            <h2>Rekapitulasi Total</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Hadir</th>
+                            <th>Izin</th>
+                            <th>Sakit</th>
+                            <th>Alpha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-rekap-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

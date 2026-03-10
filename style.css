@@ -1,0 +1,111 @@
+:root {
+    --primary: #2e7d32;
+    --secondary: #4caf50;
+    --danger: #d32f2f;
+    --light: #f4f4f4;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--light);
+    color: #333;
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background-color: var(--secondary);
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+}
+
+nav button:hover {
+    background-color: var(--primary);
+    border-bottom: 3px solid var(--secondary);
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background: var(--primary);
+    color: white;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th { background: #f8f8f8; }
+
+.btn-group {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-save { background-color: var(--secondary); }
+.btn-reset { background-color: #757575; }
+
+.delete-btn {
+    background-color: var(--danger);
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    main { margin: 10px; padding: 15px; }
+    nav button { padding: 10px; font-size: 14px; }
+}
